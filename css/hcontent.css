@@ -1,0 +1,9 @@
+/* CSS Document */
+
+.hcontent {
+	color:#111;
+	background-color: rgba(100, 221, 23, 0.5) ;
+	text-align:center;
+	padding:50px 80px;
+	text-align: justify;
+}

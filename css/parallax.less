@@ -1,0 +1,246 @@
+@color_1: #777;
+@base: rgba(255,255,255,0.9);
+@twhite: rgba(255, 255, 255, 0.8);
+@lgreen: rgba(100, 221, 23, 1);
+@tgreen: rgba(100, 221, 23, 0.5);
+@tblack: rgba(17,17,17, 0.3);
+@green: rgba(46,125,50, 1);
+@font1: "Lato", sans-serif;
+
+@font-face {
+	font-family: GreenPillow;
+	src: local("Green Pillow"), url("font/GREENPIL.TTF");
+	font-weight: normal;
+  font-style: normal;
+}
+
+body {
+	height: 100%;
+	margin-top: 3.5rem;;
+	font: 400 15px/1.8 "Lato", sans-serif;
+	color: @color_1;
+}
+
+html {
+	height: 100%;
+	margin: 0;
+	font: 400 15px/1.8 "Lato", sans-serif;
+	color: @color_1;
+}
+
+
+.bgimgbase (){
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bgimg-1 {
+  .bgimgbase;
+  background-image: url("green_tree.jpg");
+  min-height: 100%;
+}
+
+.bgimg-2 {
+  .bgimgbase;
+  background-image: url("SoilBackground.png");
+  min-height: 200px;
+}
+
+.bgimg-3 {
+  .bgimgbase;
+  background-image: url("golden_dream.jpg");
+  min-height: 200px;
+}
+
+.content-white {
+	position: relative;
+	color:#111;
+	background-color: rgba(255, 255, 255, 1) ;
+	text-align:center;
+	padding: 1rem;
+	text-align: justify;
+
+	.pillow-head {
+			color: @green;
+			font-size: 500%;
+			font-family: GreenPillow, "Lato";
+	}
+
+}
+
+.content-green {
+	color:#111;
+	position: relative;
+	background-color: @green ;
+	text-align:center;
+	padding:1rem;
+	text-align: justify;
+
+	.pillow-head {
+			color: #fff;
+			font-size: 500%;
+			font-family: GreenPillow, "Lato";
+	}
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: @tgreen;
+
+  span.border {
+    background-color: #111;
+    color: #fff;
+    padding: 18px;
+    font-size: 25px;
+    letter-spacing: 10px;
+  }
+}
+
+.agraria-head {
+	position: absolute;
+  left: 0;
+  padding-top: 5%;
+	height: 100%;
+  width: 100%;
+  text-align: center;
+	.box {
+		border-top-right-radius: 4rem;
+		border-bottom-left-radius: 4rem;
+		max-width: 500px;
+    color: #fff;
+    font-size: 25px;
+		margin: 0 auto;
+		background-color: @twhite;
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+		img {
+			max-width: 300px;
+		}
+  }
+
+	.box-mid {
+		margin-top: 2rem;
+		.box-sm {
+			border-top-right-radius: 2rem;
+			border-bottom-left-radius: 2rem;
+			max-width:300px;
+	    color: #000;
+	    font-size: 25px;
+			margin: 0 auto;
+			background-color: @twhite;
+			padding-top: 1rem;
+			padding-bottom: 1rem;
+			margin-top: 0.5rem;
+			img {
+				max-width: 100px;
+			}
+		}
+
+		.box-sm:hover {
+			background-color: @base;
+		}
+	}
+}
+
+.agraria-about {
+	color: #777;
+	background-color:white;
+	text-align:center;
+	padding: 1rem;
+	text-align: justify;
+
+	.row {
+		.columns {
+			padding: 0.5rem;
+		}
+	}
+
+}
+
+h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 20px "Lato", sans-serif;
+  color: #111;
+}
+
+@media only screen and (max-device-width: 1024px) {
+	.bgimg-1 {
+		background-attachment: scroll;
+	}
+	.bgimg-2 {
+		background-attachment: scroll;
+	}
+	.bgimg-3 {
+		background-attachment: scroll;
+	}
+}
+
+
+
+/* Micro ClearFix Mixin */
+.clearfix{
+  zoom:1;
+  &:before, &:after{ content:""; display:table; }
+  &:after{ clear: both; }
+}
+
+.top-bar {
+	padding-top: 0rem;
+	padding-bottom: 0rem;
+	margin-top: -3.5rem;
+	height: 3.5rem;
+	.menu {
+		background-color: rgba(255,255,255,0);
+		padding-bottom: 0.1rem
+		color:#eee;
+		font-family: GreenPillow;
+		font-size: 200%;
+		li {
+			padding-bottom: 0.1rem;
+			a {
+				color: @green;
+			}
+		}
+		.menu-text {
+			padding-top: 0.5rem;
+			padding-bottom: 0.5rem;
+		}
+		li:hover {
+			background-color: @green;
+			a {
+				color: #fff;
+			}
+		}
+	}
+}
+
+.fixed-float {
+	z-index: 5;
+	position:fixed;
+	width: 100%;
+	background-color: @base;
+}
+
+.pillow-head {
+		color: @green;
+		font-size: 500%;
+		font-family: GreenPillow, "Lato";
+}
+
+.container-full-w {
+	position: absolute;
+  left: 0;
+  padding-top: 5%;
+	height: 100%;
+  width: 100%;
+  text-align: center;
+	background-color: @twhite;
+}

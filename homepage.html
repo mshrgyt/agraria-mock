@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+
+<link href="css/foundation.css" rel="stylesheet" type="text/css">
+<link href="css/parallax.less" rel="stylesheet/less" type="text/css">
+<script src="js/jquery.js" type="text/javascript"></script>
+<script src="js/less.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+
+<div class="top-bar fixed-float hide-for-small-only">
+    <div class="top-bar-right">
+        <ul class="menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#how">How it works</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+</div>
+<div id="home" class="bgimg-1 clearfix">
+  <div class="agraria-head">
+    <div class="box">
+      <img src="css/agraria-logo.png"></img>
+    </div>
+    <div class="row box-mid">
+      <a href="#">
+        <div class="medium-4 columns">
+          <div class="box-sm">
+            TES
+          </div>
+        </div>
+      </a>
+      <a href="#">
+        <div class="medium-4 columns">
+          <div class="box-sm">
+            TES
+          </div>
+        </div>
+      </a>
+      <a href="#">
+        <div class="medium-4 columns">
+          <div class="box-sm">
+            TES
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div id="about" class="agraria-about">
+  <h2 class="pillow-head" style="text-align:center;">About Agraria</h2>
+  <div class="row medium-uncollapse large-collapse">
+  	<div class="small-4 columns">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </div>
+    <div class="small-4 columns" >
+    	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </div>
+    <div class="small-4 columns">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  	</div>
+  </div>
+</div>
+
+<div class="bgimg-2 clearfix">
+  <div class="container-full-w">
+    <h2>SOME CONTENT</h2>
+  </div>
+</div>
+
+<div id="how" class="content-white">
+  <div>
+    <h2 class="pillow-head" style="text-align:center;">How we Works</h2>
+  </div>
+</div>
+
+<div class="bgimg-3 clearfix">
+  <div class="container-full-w">
+    <h2>HOW IT WORK CONTENT</h2>
+  </div>
+</div>
+
+<div class="content-white">
+  <div>
+    <p>Scroll up and down to really get the feeling of how Parallax Scrolling works.</p>
+  </div>
+</div>
+
+<div class="bgimg-2 clearfix">
+  <div class="caption">
+    <span class="border">COOL!</span>
+  </div>
+</div>
+<div class="content-white">
+  <div>
+    <p>Scroll up and down to really get the feeling of how Parallax Scrolling works.</p>
+  </div>
+</div>
+<script type="text/javascript">
+    var body_margin = 0;
+    $('a[href^="#"]').click(function(){
+  	var the_id = $(this).attr("href");
+    body_margin = parseFloat($("body").css("margin-top"));
+  	$('html, body').animate({
+  		scrollTop:$(the_id).offset().top
+  	- body_margin}, 'slow');
+  	return false;
+  });
+</script>
+
+
+</body>
+</html>
